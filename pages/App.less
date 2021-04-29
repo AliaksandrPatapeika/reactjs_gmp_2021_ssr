@@ -1,0 +1,25 @@
+@import "src/less/reset";
+@import "src/less/variables";
+@import "src/less/common";
+
+body {
+	background-color: @gray;
+
+	/* Sticky Footer with Flexbox */
+	#app {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		.mainContainer,
+		.modalWindowContainer,
+		.pageNotFoundContainer,
+		.useSearchContainer {
+			flex: 1 0 auto;
+		}
+
+		.footerContainer {
+			flex-shrink: 0;
+		}
+	}
+}

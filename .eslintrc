@@ -1,0 +1,41 @@
+{
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"parser": "@babel/eslint-parser",
+	"extends": ["airbnb", "airbnb/hooks"],
+	"plugins": [
+		"react",
+		"react-hooks",
+		"jsx-a11y",
+		"import",
+		"simple-import-sort"
+	],
+	"rules": {
+		"react/jsx-props-no-spreading": ["off"],
+		"simple-import-sort/imports": "error",
+		"comma-dangle": ["error", "never"],
+		"object-curly-spacing": ["error", "never"],
+		"newline-after-var": ["error", "always"],
+		"react/state-in-constructor": ["error", "never"],
+		"no-tabs": ["error", {"allowIndentationTabs": true}],
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"camelcase": "off",
+		"linebreak-style": "off",
+		"jsx-a11y/label-has-associated-control": [
+			"error", {
+				"required": {
+					"some": ["nesting", "id"]
+				}
+			}
+		],
+		"jsx-a11y/label-has-for": [
+			"error", {
+				"required": {
+					"some": ["nesting", "id"]
+				}
+			}
+		]
+	}
+}
