@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UseSearch renders correctly 1`] = `
+<div
+  className="useSearchContainer"
+>
+  <h1
+    className="title"
+  >
+    Use Search to find movies
+  </h1>
+</div>
+`;

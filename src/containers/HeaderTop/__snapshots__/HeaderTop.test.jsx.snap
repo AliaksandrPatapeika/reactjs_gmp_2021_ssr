@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderTop renders correctly 1`] = `
+<div
+  className="headerTopContainer"
+>
+  <div
+    className="logoContainer"
+  >
+    <span
+      className="netflix"
+    >
+      netflix
+    </span>
+    <span
+      className="roulette"
+    >
+      roulette
+    </span>
+  </div>
+  <button
+    className="returnToMainButton"
+    disabled={false}
+    id={null}
+    onClick={[Function]}
+    type="button"
+  >
+    
+    <i
+      aria-hidden="true"
+      className="fa fa-search fa-flip-horizontal"
+    />
+  </button>
+</div>
+`;

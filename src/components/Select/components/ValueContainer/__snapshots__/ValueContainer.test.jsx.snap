@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ValueContainer renders correctly 1`] = `
+<div
+  className="css-pilx6v-ValueContainer"
+>
+  <span>
+    children 0
+  </span>
+  <span>
+    children 1
+  </span>
+</div>
+`;

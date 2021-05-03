@@ -26,6 +26,9 @@
 	&:hover,
 	&:focus {
 		background-color: @red;
+		-webkit-box-shadow: 0 0 0 1px @white;
+		-moz-box-shadow: 0 0 0 1px @white;
+		box-shadow: 0 0 0 1px @white;
 	}
 }
 
@@ -89,6 +92,7 @@
 			}
 
 			/* show separator only when the clear "X" button is displayed */
+
 			&.select__value-container--is-multi.select__value-container--has-value + .select__indicators > .select__indicator-separator {
 				display: inline-block;
 				background-color: @red;
@@ -141,6 +145,7 @@
 				}
 
 				/* custom checkboxes */
+
 				input[type=checkbox] {
 					display: none;
 

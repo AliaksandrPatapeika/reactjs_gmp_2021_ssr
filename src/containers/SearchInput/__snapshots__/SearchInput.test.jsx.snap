@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput renders correctly 1`] = `
+<input
+  autoComplete="off"
+  className="searchInput"
+  onChange={[Function]}
+  placeholder="What do you want to watch?"
+  value="value"
+/>
+`;

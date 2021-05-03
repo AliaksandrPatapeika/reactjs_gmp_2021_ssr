@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultCount renders correctly 1`] = `
+<div
+  className="resultCountContainer"
+>
+  <span
+    className="resultCount"
+  >
+    0
+     
+  </span>
+  <span>
+    movies found
+  </span>
+</div>
+`;

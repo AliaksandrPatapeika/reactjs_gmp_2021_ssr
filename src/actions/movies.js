@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import {BASE_URL} from '../constants/constants';
-import {getQueryString} from '../utils';
+import {getQueryString, scrollToTop} from '../utils';
 import * as actions from './actionTypes';
 
 export const catchError = (error) => ({
@@ -54,7 +54,10 @@ export const setSearch = (value) => ({
 
 export const showModal = (activeModalWindow, activeModalMovie) => ({
   type: actions.SHOW_MODAL,
-  payload: {activeModalWindow, activeModalMovie}
+  payload: {
+    activeModalWindow,
+    activeModalMovie
+  }
 });
 
 export const showMovieDetails = (movie) => ({
@@ -72,6 +75,7 @@ export const fetchMovies = () => (dispatch, getState) => {
     .get(`${BASE_URL}${getQueryString(getState().query)}`)
     .then((res) => {
       dispatch(fetchMoviesSuccess(res.data));
+      scrollToTop();
     })
     .catch((error) => {
       dispatch(catchError(error.message));
@@ -91,6 +95,7 @@ export const addMovie = (payload) => (dispatch) => axios
   .post(BASE_URL, payload)
   .then(() => {
     dispatch(closeModal());
+    dispatch(fetchMovies());
   })
   .catch((error) => {
     dispatch(catchError(error.message));
@@ -100,6 +105,7 @@ export const editMovie = (payload) => (dispatch) => axios
   .put(BASE_URL, payload)
   .then(() => {
     dispatch(closeModal());
+    dispatch(fetchMovies());
   })
   .catch((error) => {
     dispatch(catchError(error.message));
@@ -109,29 +115,30 @@ export const deleteMovie = (movieId) => (dispatch) => axios
   .delete(`${BASE_URL}/${movieId}`)
   .then(() => {
     dispatch(closeModal());
+    dispatch(fetchMovies());
   })
   .catch((error) => {
     dispatch(catchError(error.message));
   });
 
-export const setStateFromURL = (url) => (dispatch) => {
-  if (url.get('search')) {
-    dispatch(setSearch(url.get('search')));
+export const setStateFromURL = (routerQuery) => (dispatch) => {
+  if (routerQuery.search) {
+    dispatch(setSearch(routerQuery.search));
   }
 
-  if (url.get('filter')) {
-    dispatch(setFilter(url.get('filter')));
+  if (routerQuery.filter) {
+    dispatch(setFilter(routerQuery.filter));
   }
 
-  if (url.get('sortBy')) {
-    dispatch(setSortBy(url.get('sortBy')));
+  if (routerQuery.sortBy) {
+    dispatch(setSortBy(routerQuery.sortBy));
   }
 
-  if (url.get('sortOrder')) {
-    dispatch(setSortOrder(url.get('sortOrder')));
+  if (routerQuery.sortOrder) {
+    dispatch(setSortOrder(routerQuery.sortOrder));
   }
 
-  if (url.get('limit')) {
-    dispatch(setLimit(url.get('limit')));
+  if (routerQuery.limit) {
+    dispatch(setLimit(routerQuery.limit));
   }
 };

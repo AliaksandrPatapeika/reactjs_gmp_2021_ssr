@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieGenres renders correctly 1`] = `
+<div
+  className="movieGenres"
+>
+  Action & Adventure
+</div>
+`;

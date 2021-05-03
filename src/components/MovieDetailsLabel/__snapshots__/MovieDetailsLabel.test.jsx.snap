@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetailsLabel renders correctly 1`] = `
+<div
+  className="movieDetailsLabel"
+>
+  mock label
+  : 
+  <span
+    className="movieDetailsValue"
+  >
+    mock value
+  </span>
+</div>
+`;

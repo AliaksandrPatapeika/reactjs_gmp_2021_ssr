@@ -1,0 +1,37 @@
+@import "../src/less/variables";
+
+.pageNotFoundContainer {
+	padding: 22px 62px;
+	background-color: @black;
+
+	.pageNotFoundContent {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		align-items: center;
+
+		.errorPageImage {
+			margin: 72px 0;
+		}
+
+		.goBackButton {
+			cursor: pointer;
+			width: 248px;
+			padding: 15px 0;
+			border: 2px solid @red;
+			border-radius: 4px;
+			color: @red;
+			font-size: 22px;
+			font-family: @NetflixSans-Regular;
+			background-color: transparent;
+
+			&:hover,
+			&:focus {
+				color: @white;
+				background-color: @red-hover;
+				border-color: transparent;
+			}
+		}
+	}
+}

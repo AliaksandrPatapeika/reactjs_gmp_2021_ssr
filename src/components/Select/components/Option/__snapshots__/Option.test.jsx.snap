@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Option renders correctly 1`] = `
+<div>
+  <div
+    className="css-o8533i-Option"
+  >
+    <input
+      checked={true}
+      onChange={[Function]}
+      type="checkbox"
+    />
+     
+    <label>
+      label
+    </label>
+  </div>
+</div>
+`;

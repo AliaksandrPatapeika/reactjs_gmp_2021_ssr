@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NoMoviesFound renders correctly 1`] = `
+<div
+  className="noMoviesFoundContainer"
+>
+  <h1
+    className="title"
+  >
+    No Movie Found
+  </h1>
+</div>
+`;

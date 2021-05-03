@@ -1,0 +1,42 @@
+@import "../../less/variables";
+
+.headerTopContainer {
+	display: flex;
+	justify-content: space-between;
+
+	.returnToMainButton {
+		cursor: pointer;
+		padding: 3px 6px;
+		border-radius: 2px;
+		color: @red;
+		font-size: 23px;
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			color: @red-hover;
+			-webkit-box-shadow: 0 0 0 1px @white;
+			-moz-box-shadow: 0 0 0 1px @white;
+			box-shadow: 0 0 0 1px @white;
+		}
+	}
+
+	.addMovieButton {
+		cursor: pointer;
+		width: 184px;
+		height: 48px;
+		border-radius: 4px;
+		color: @red;
+		font-size: 22px;
+		font-family: @NetflixSans-Medium;
+		background-color: @gray;
+		opacity: 0.8;
+
+		&:hover,
+		&:focus {
+			color: @white;
+			background-color: @red-hover;
+			opacity: 1;
+		}
+	}
+}

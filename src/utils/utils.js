@@ -3,21 +3,23 @@ import {
 } from 'lodash';
 import * as Yup from 'yup';
 
-import noImage from '../../public/img/noImage.png';
-
 export const getGenres = (Genres, movieGenres) => lodashFilter(
   Genres, ({label}) => includes(movieGenres, label)
 );
 
-export const getStrFromName = (name) => name.split('_').join(' ');
+export const getStrFromName = (name) => name.split('_')
+  .join(' ');
 
-export const getLabelFromName = (name) => getStrFromName(name).toUpperCase();
+export const getLabelFromName = (name) => getStrFromName(name)
+  .toUpperCase();
 
-export const getPlaceholderFromName = (name) => `${getStrFromName(name).charAt(0)
-  .toUpperCase()}${getStrFromName(name).slice(1)} here`;
+export const getPlaceholderFromName = (name) => `${getStrFromName(name)
+  .charAt(0)
+  .toUpperCase()}${getStrFromName(name)
+  .slice(1)} here`;
 
 export const isValidVoteAverage = (voteAverage) => isUndefined(voteAverage)
-	|| /^\d+(\.\d)?$/.test(voteAverage);
+  || /^\d+(\.\d)?$/.test(voteAverage);
 
 export const isValidUrl = (url) => {
   // validate empty input value
@@ -40,13 +42,16 @@ export const getValidationSchema = () => Yup.object({
     .integer('The budget should be an integer.')
     .typeError('The budget should be a number.')
     .min(0, 'The budget should be greater than or equal to 0.'),
-  genres: Yup.array().min(1, 'Select at least one movie genre.'),
-  overview: Yup.string().required('Enter the movie overview.'),
+  genres: Yup.array()
+    .min(1, 'Select at least one movie genre.'),
+  overview: Yup.string()
+    .required('Enter the movie overview.'),
   poster_path: Yup.string()
     .test('isValidUrl',
       'Invalid movie poster image URL. Leave this field blank if there is no poster.',
       (value) => isValidUrl(value)),
-  release_date: Yup.string().required('Select the movie release date.'),
+  release_date: Yup.string()
+    .required('Select the movie release date.'),
   revenue: Yup.number()
     .integer('The revenue should be an integer.')
     .typeError('The revenue should be a number.')
@@ -56,8 +61,10 @@ export const getValidationSchema = () => Yup.object({
     .typeError('The runtime should be a number.')
     .min(0, 'The runtime should be greater than or equal to 0.')
     .required('Enter the movie runtime.'),
-  tagline: Yup.string().required('Enter the movie tagline.'),
-  title: Yup.string().required('Enter the movie title.'),
+  tagline: Yup.string()
+    .required('Enter the movie tagline.'),
+  title: Yup.string()
+    .required('Enter the movie title.'),
   vote_average: Yup.number()
     .typeError('The vote average should be a number.')
     .min(0, 'The vote average should be greater than or equal to 0.')
@@ -74,11 +81,13 @@ export const getValidationSchema = () => Yup.object({
 /* https://medium.com/@webcore1/react-fallback-for-broken-images-strategy-a8dfa9c1be1e */
 export const addDefaultSrc = (event) => {
   // eslint-disable-next-line no-param-reassign
-  event.target.src = noImage;
+  event.target.src = '/img/noImage.png';
 };
 
 export const convertMovieData = (movieData) => ({
-  poster_path: movieData.poster_path ? movieData.poster_path : window.location.origin + noImage,
+  poster_path: movieData.poster_path
+    ? movieData.poster_path
+    : `${window.location.origin}/img/noImage.png`,
   genres: map(movieData.genres, (movie) => movie.label),
   budget: Number(movieData.budget),
   revenue: Number(movieData.revenue),

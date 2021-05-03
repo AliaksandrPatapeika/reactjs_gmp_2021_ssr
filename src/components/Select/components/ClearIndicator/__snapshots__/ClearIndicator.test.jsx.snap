@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearIndicator renders correctly 1`] = `
+<div
+  className="css-h0vbma-ClearIndicator"
+>
+  <i
+    aria-hidden="true"
+    className="fa fa-times"
+  />
+</div>
+`;

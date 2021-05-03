@@ -1,0 +1,326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesList renders correctly 1`] = `
+<div
+  className="moviesListContainer"
+>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Pulp Fiction
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 2004-03-15"
+      >
+        2004
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Action & Adventure
+    </div>
+  </div>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Bohemian Rhapsody
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 2003-05-23"
+      >
+        2003
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Drama, Biography, Music
+    </div>
+  </div>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Kill Bill: Vol 2
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 1994-01-08"
+      >
+        1994
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Oscar winning Movie
+    </div>
+  </div>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Avengers: War of Infinity
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 2004-07-21"
+      >
+        2004
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Action & Adventure
+    </div>
+  </div>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Inception
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 2003-05-02"
+      >
+        2003
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Action & Adventure
+    </div>
+  </div>
+  <div
+    className="movieCardContainer"
+    onMouseLeave={[Function]}
+  >
+    <button
+      className="posterButton"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card poster"
+        className="movieCardPoster"
+        onError={[Function]}
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      className="threeDotsIcon"
+      disabled={false}
+      id={null}
+      onClick={[Function]}
+      type="button"
+    >
+      
+      <img
+        alt="movie card menu"
+        src="/img/moreButton.svg"
+      />
+    </button>
+    <div
+      className="movieTitleReleaseDateContainer"
+    >
+      <div
+        className="movieTitle"
+      >
+        Reservoir dogs
+      </div>
+      <div
+        className="movieReleaseDate"
+        title="Release date: 1994-11-30"
+      >
+        1994
+      </div>
+    </div>
+    <div
+      className="movieGenres"
+    >
+      Oscar winning Movie
+    </div>
+  </div>
+</div>
+`;

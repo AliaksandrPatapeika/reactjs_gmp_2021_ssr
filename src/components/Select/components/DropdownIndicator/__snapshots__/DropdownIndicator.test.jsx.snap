@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownIndicator renders correctly 1`] = `
+<div
+  className="css-hbt8bd-DropdownIndicator"
+>
+  <i
+    aria-hidden="true"
+    className="fa fa-caret-down"
+  />
+</div>
+`;

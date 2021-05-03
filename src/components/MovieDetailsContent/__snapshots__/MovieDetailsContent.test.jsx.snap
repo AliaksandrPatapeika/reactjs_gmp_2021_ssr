@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetailsContent renders correctly 1`] = `
+<div
+  className="movieDetailsContentContainer"
+>
+  <img
+    alt="movie details poster"
+    className="movieDetailsPoster"
+    onError={[Function]}
+    src="test-file-stub"
+  />
+  <div
+    className="movieDetailsContent"
+  >
+    <div
+      className="movieDetailsTitleRating"
+    >
+      <span
+        className="movieDetailsTitle"
+      >
+        Pulp Fiction
+      </span>
+      <div
+        className="movieDetailsRating"
+        title="Vote count: 1195"
+      >
+        4.3
+      </div>
+    </div>
+    <div>
+      Mock tagline!
+    </div>
+    <div
+      className="movieDetailsReleaseDateRuntime"
+    >
+      <div
+        title="Release date: 2004-03-15"
+      >
+        2004
+      </div>
+      <div>
+        154
+         
+        min
+      </div>
+    </div>
+    <div
+      className="movieDetailsLabel"
+    >
+      Genres
+      : 
+      <span
+        className="movieDetailsValue"
+      >
+        Action & Adventure
+      </span>
+    </div>
+    <div
+      className="movieDetailsLabel"
+    >
+      Budget
+      : 
+      <span
+        className="movieDetailsValue"
+      >
+        55 000 000 $
+      </span>
+    </div>
+    <div
+      className="movieDetailsLabel"
+    >
+      Revenue
+      : 
+      <span
+        className="movieDetailsValue"
+      >
+        136 906 000 $
+      </span>
+    </div>
+    <div
+      className="overview"
+    >
+      Pulp Fiction is a 1994 American neo-noir black comedy crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[4] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,22 @@
+@import "../../less/variables";
+
+.filterItem {
+	cursor: pointer;
+	padding: 0 12px 17px 0;
+	color: @white;
+	font-size: 20px;
+	font-family: @NetflixSans-Regular;
+
+	&:first-of-type {
+		padding-left: 0;
+	}
+
+	&:hover,
+	&:focus {
+		color: @red;
+	}
+}
+
+.active {
+	border-bottom: 3px solid @red;
+}

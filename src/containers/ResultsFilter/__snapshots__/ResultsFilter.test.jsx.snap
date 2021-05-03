@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsFilter renders correctly 1`] = `
+<nav>
+  <ul
+    className="resultsFilterContainer"
+  >
+    <li
+      className="filterItem active"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    >
+      ALL
+    </li>
+    <li
+      className="filterItem"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    >
+      DOCUMENTARY
+    </li>
+    <li
+      className="filterItem"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    >
+      COMEDY
+    </li>
+    <li
+      className="filterItem"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    >
+      HORROR
+    </li>
+    <li
+      className="filterItem"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    >
+      CRIME
+    </li>
+  </ul>
+</nav>
+`;

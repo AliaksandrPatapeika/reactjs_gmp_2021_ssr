@@ -1,24 +1,31 @@
-import fileMock from '../tests/mocks/fileMock';
 import * as utils from './utils';
 
 describe('utils', () => {
   test('isValidVoteAverage', () => {
-    expect(utils.isValidVoteAverage(undefined)).toEqual(true);
-    expect(utils.isValidVoteAverage('100500')).toEqual(true);
-    expect(utils.isValidVoteAverage('vote average')).toEqual(false);
+    expect(utils.isValidVoteAverage(undefined))
+      .toEqual(true);
+    expect(utils.isValidVoteAverage('100500'))
+      .toEqual(true);
+    expect(utils.isValidVoteAverage('vote average'))
+      .toEqual(false);
   });
 
   test('isValidUrl', () => {
-    expect(utils.isValidUrl(undefined)).toEqual(true);
-    expect(utils.isValidUrl('https://url.com/img.jpg')).toEqual(true);
-    expect(utils.isValidUrl('wrong url')).toEqual(false);
+    expect(utils.isValidUrl(undefined))
+      .toEqual(true);
+    expect(utils.isValidUrl('https://url.com/img.jpg'))
+      .toEqual(true);
+    expect(utils.isValidUrl('wrong url'))
+      .toEqual(false);
   });
 
   test('addDefaultSrc', () => {
     const mockEvent = {target: {src: ''}};
+    const mockNoImage = '/img/noImage.png';
 
     utils.addDefaultSrc(mockEvent);
-    expect(mockEvent.target.src).toEqual(fileMock);
+    expect(mockEvent.target.src)
+      .toEqual(mockNoImage);
   });
 
   test('convertMovieData', () => {
@@ -41,12 +48,14 @@ describe('utils', () => {
       vote_count: 1000
     };
 
-    expect(utils.convertMovieData(mockMovieData)).toEqual(mockResult);
+    expect(utils.convertMovieData(mockMovieData))
+      .toEqual(mockResult);
   });
 
   test('scrollToTop', () => {
     window.scrollTo = jest.fn();
     utils.scrollToTop();
-    expect(window.scrollTo).toHaveBeenCalled();
+    expect(window.scrollTo)
+      .toHaveBeenCalled();
   });
 });

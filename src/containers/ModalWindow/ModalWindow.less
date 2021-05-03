@@ -1,0 +1,148 @@
+@import "../../less/variables";
+
+.modalWindowContainer {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/bgImage.jpg');
+	background-size: cover;
+
+	.modalWindow {
+		display: flex;
+		flex-direction: column;
+		margin: 80px auto;
+		border-radius: 6px;
+		background: @black;
+		max-width: 726px;
+
+		.closeButton {
+			margin: 20px 20px 0 0;
+			font-size: 30px;
+		}
+
+		.modalBody {
+			display: flex;
+			flex-direction: column;
+			padding: 0 88px;
+
+			.formItem {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.content {
+				margin-top: 24px;
+				color: @white;
+				font-size: 25px;
+				font-family: @NetflixSans-Thin;
+			}
+
+			.label {
+				margin: 30px 0 10px 0;
+				color: @red;
+				font-size: 17px;
+				font-family: @NetflixSans-Regular;
+
+				&.required-label:after {
+					content: @required-label-indicator;
+					position: absolute;
+					margin-left: 3px;
+					color: @required-label-color;
+					font-size: 20px;
+				}
+			}
+
+			.validationErrorMessage {
+				color: @required-label-color;
+				font-size: 15px;
+				font-family: @NetflixSans-Regular;
+			}
+
+			.modalFooter {
+				display: flex;
+				justify-content: flex-end;
+				margin: 50px 0 73px 0;
+
+				.button {
+					cursor: pointer;
+					width: 190px;
+					padding: 15px 0;
+					border: 2px solid @red;
+					border-radius: 4px;
+					color: @red;
+					font-size: 22px;
+					font-family: @NetflixSans-Regular;
+					background-color: transparent;
+
+					&:hover:enabled,
+					&:focus:enabled {
+						color: @red-hover;
+						border-color: @red-hover;
+					}
+
+					&:last-of-type {
+						margin-left: 15px;
+						color: @white;
+						background-color: @red;
+
+						&:disabled {
+							color: @light-gray;
+							cursor: default;
+							background-color: transparent;
+						}
+
+						&:hover:enabled,
+						&:focus:enabled {
+							color: @white;
+							background-color: @red-hover;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Replacing the calendar icon + placeholder for input-type value */
+input[type="date"] {
+	position: relative;
+
+	&::-webkit-calendar-picker-indicator {
+		cursor: pointer;
+		color: transparent;
+		background: none;
+		z-index: 1;
+		outline: none;
+	}
+
+	&:not(:focus):not(.valid-date)::-webkit-datetime-edit-year-field,
+	&:not(:focus):not(.valid-date)::-webkit-datetime-edit-month-field,
+	&:not(:focus):not(.valid-date)::-webkit-datetime-edit-day-field,
+	&:not(:focus):not(.valid-date)::-webkit-datetime-edit-text {
+		color: transparent;
+	}
+
+	&:not(.valid-date):after{
+		content: attr(placeholder);
+		position: absolute;
+		/* Placeholder color */
+		color: @placeholder;
+	}
+
+	&:focus:after	{
+		content: '';
+	}
+
+	&:before {
+		content: '\f073';
+		position: absolute;
+		right: 15px;
+		/* This is the calendar icon in FontAwesome */
+		display: block;
+		color: @red;
+		font-size: 24px;
+		font-family: @FontAwesome;
+		background: none;
+	}
+
+	&:hover:before {
+		color: @red-hover;
+	}
+}

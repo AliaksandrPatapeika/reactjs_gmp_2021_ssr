@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeleteMovie renders correctly 1`] = `
+Array [
+  <span
+    className="title"
+  >
+    title
+  </span>,
+  <form
+    onSubmit={[Function]}
+  >
+    <h1
+      className="content"
+    >
+      Are you sure you want to delete this movie?
+    </h1>
+    <div
+      className="modalFooter"
+    >
+      <button
+        className="button"
+        disabled={false}
+        id={null}
+        onClick={[Function]}
+        type="submit"
+      >
+        CONFIRM
+        
+      </button>
+    </div>
+  </form>,
+]
+`;

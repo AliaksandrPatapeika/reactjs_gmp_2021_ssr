@@ -1,0 +1,21 @@
+@import "../../less/variables";
+
+.searchContainer {
+	display: flex;
+	margin-top: 33px;
+
+	.searchButton {
+		cursor: pointer;
+		padding: 16px 77px;
+		border-radius: 4px;
+		color: @white;
+		font-size: 22px;
+		font-family: @NetflixSans-Regular;
+		background-color: @red;
+
+		&:hover,
+		&:focus {
+			background-color: @red-hover;
+		}
+	}
+}

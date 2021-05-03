@@ -12,6 +12,11 @@ const mockStore = configureMockStore(middlewares);
 
 describe('movies actions', () => {
   const mockMovie = head(MockMovies);
+  const mockFilter = 'comedy';
+  const mockSortBy = 'runtime';
+  const mockSortOrder = 'asc';
+  const mockLimit = 6;
+  const mockSearch = 'The Movie';
   const mockErrorMessage = 'error message';
   const mockInitialState = {
     query: {
@@ -31,6 +36,8 @@ describe('movies actions', () => {
     response: MockMovies
   };
 
+  window.scrollTo = jest.fn();
+
   beforeEach(() => {
     moxios.install();
   });
@@ -45,7 +52,8 @@ describe('movies actions', () => {
       payload: mockErrorMessage
     };
 
-    expect(actions.catchError(mockErrorMessage)).toEqual(expectedAction);
+    expect(actions.catchError(mockErrorMessage))
+      .toEqual(expectedAction);
   });
 
   test('closeModal', () => {
@@ -53,7 +61,8 @@ describe('movies actions', () => {
       type: actionTypes.CLOSE_MODAL
     };
 
-    expect(actions.closeModal()).toEqual(expectedAction);
+    expect(actions.closeModal())
+      .toEqual(expectedAction);
   });
 
   test('closeMovieDetails', () => {
@@ -61,7 +70,8 @@ describe('movies actions', () => {
       type: actionTypes.CLOSE_MOVIE_DETAILS
     };
 
-    expect(actions.closeMovieDetails()).toEqual(expectedAction);
+    expect(actions.closeMovieDetails())
+      .toEqual(expectedAction);
   });
 
   test('fetchMoviesSuccess', () => {
@@ -70,7 +80,8 @@ describe('movies actions', () => {
       payload: MockMovies
     };
 
-    expect(actions.fetchMoviesSuccess(MockMovies)).toEqual(expectedAction);
+    expect(actions.fetchMoviesSuccess(MockMovies))
+      .toEqual(expectedAction);
   });
 
   test('getMovieByIdSuccess', () => {
@@ -79,57 +90,58 @@ describe('movies actions', () => {
       payload: mockMovie
     };
 
-    expect(actions.getMovieByIdSuccess(mockMovie)).toEqual(expectedAction);
+    expect(actions.getMovieByIdSuccess(mockMovie))
+      .toEqual(expectedAction);
   });
 
   test('setFilter', () => {
-    const mockFilter = 'comedy';
     const expectedAction = {
       type: actionTypes.SET_ACTIVE_FILTER,
       payload: mockFilter
     };
 
-    expect(actions.setFilter(mockFilter)).toEqual(expectedAction);
+    expect(actions.setFilter(mockFilter))
+      .toEqual(expectedAction);
   });
 
   test('setSortBy', () => {
-    const mockSortBy = 'release_date';
     const expectedAction = {
       type: actionTypes.SET_SORT_BY,
       payload: mockSortBy
     };
 
-    expect(actions.setSortBy(mockSortBy)).toEqual(expectedAction);
+    expect(actions.setSortBy(mockSortBy))
+      .toEqual(expectedAction);
   });
 
   test('setSortOrder', () => {
-    const mockSortOrder = 'asc';
     const expectedAction = {
       type: actionTypes.SET_SORT_ORDER,
       payload: mockSortOrder
     };
 
-    expect(actions.setSortOrder(mockSortOrder)).toEqual(expectedAction);
+    expect(actions.setSortOrder(mockSortOrder))
+      .toEqual(expectedAction);
   });
 
   test('setLimit', () => {
-    const mockLimit = 6;
     const expectedAction = {
       type: actionTypes.SET_LIMIT,
       payload: mockLimit
     };
 
-    expect(actions.setLimit(mockLimit)).toEqual(expectedAction);
+    expect(actions.setLimit(mockLimit))
+      .toEqual(expectedAction);
   });
 
   test('setSearch', () => {
-    const mockSearch = 'The Movie';
     const expectedAction = {
       type: actionTypes.SET_SEARCH,
       payload: mockSearch
     };
 
-    expect(actions.setSearch(mockSearch)).toEqual(expectedAction);
+    expect(actions.setSearch(mockSearch))
+      .toEqual(expectedAction);
   });
 
   test('showModal', () => {
@@ -142,7 +154,8 @@ describe('movies actions', () => {
       }
     };
 
-    expect(actions.showModal(mockActiveModalWindow, mockMovie)).toEqual(expectedAction);
+    expect(actions.showModal(mockActiveModalWindow, mockMovie))
+      .toEqual(expectedAction);
   });
 
   test('showMovieDetails', () => {
@@ -151,7 +164,8 @@ describe('movies actions', () => {
       payload: mockMovie
     };
 
-    expect(actions.showMovieDetails(mockMovie)).toEqual(expectedAction);
+    expect(actions.showMovieDetails(mockMovie))
+      .toEqual(expectedAction);
   });
 
   test('startAsyncRequest', () => {
@@ -159,14 +173,18 @@ describe('movies actions', () => {
       type: actionTypes.START_ASYNC_REQUEST
     };
 
-    expect(actions.startAsyncRequest()).toEqual(expectedAction);
+    expect(actions.startAsyncRequest())
+      .toEqual(expectedAction);
   });
 
   test('fetchMovies', () => {
     const store = mockStore(mockInitialState);
     const expectedActions = [
       {type: actionTypes.START_ASYNC_REQUEST},
-      {type: actionTypes.FETCH_MOVIES_SUCCESS, payload: MockMovies}
+      {
+        type: actionTypes.FETCH_MOVIES_SUCCESS,
+        payload: MockMovies
+      }
     ];
 
     moxios.wait(() => {
@@ -177,7 +195,8 @@ describe('movies actions', () => {
 
     return store.dispatch(actions.fetchMovies())
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions())
+          .toEqual(expectedActions);
       });
   });
 
@@ -185,7 +204,10 @@ describe('movies actions', () => {
     const store = mockStore(mockInitialState);
     const expectedActions = [
       {type: actionTypes.START_ASYNC_REQUEST},
-      {type: actionTypes.CATCH_ERROR, payload: mockErrorMessage}
+      {
+        type: actionTypes.CATCH_ERROR,
+        payload: mockErrorMessage
+      }
     ];
 
     moxios.wait(() => {
@@ -196,14 +218,18 @@ describe('movies actions', () => {
 
     return store.dispatch(actions.fetchMovies())
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions())
+          .toEqual(expectedActions);
       });
   });
 
   test('getMovieById', () => {
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.GET_MOVIE_BY_ID_SUCCESS, payload: mockMovie}
+      {
+        type: actionTypes.GET_MOVIE_BY_ID_SUCCESS,
+        payload: mockMovie
+      }
     ];
 
     moxios.wait(() => {
@@ -217,14 +243,18 @@ describe('movies actions', () => {
 
     return store.dispatch(actions.getMovieById(mockMovie.id))
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions())
+          .toEqual(expectedActions);
       });
   });
 
   test('getMovieById error', () => {
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.CATCH_ERROR, payload: mockErrorMessage}
+      {
+        type: actionTypes.CATCH_ERROR,
+        payload: mockErrorMessage
+      }
     ];
 
     moxios.wait(() => {
@@ -235,14 +265,16 @@ describe('movies actions', () => {
 
     return store.dispatch(actions.getMovieById(mockMovie.id))
       .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
+        expect(store.getActions())
+          .toEqual(expectedActions);
       });
   });
 
   test('addMovie', () => {
-    const store = mockStore({});
+    const store = mockStore(mockInitialState);
     const expectedActions = [
-      {type: actionTypes.CLOSE_MODAL}
+      {type: actionTypes.CLOSE_MODAL},
+      {type: actionTypes.START_ASYNC_REQUEST}
     ];
 
     moxios.wait(() => {
@@ -251,15 +283,20 @@ describe('movies actions', () => {
       request.respondWith(mockSuccessResponse);
     });
 
-    return store.dispatch(actions.addMovie(mockMovie)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.addMovie(mockMovie))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('addMovie error', () => {
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.CATCH_ERROR, payload: mockErrorMessage}
+      {
+        type: actionTypes.CATCH_ERROR,
+        payload: mockErrorMessage
+      }
     ];
 
     moxios.wait(() => {
@@ -268,15 +305,18 @@ describe('movies actions', () => {
       request.reject(mockErrorResponse);
     });
 
-    return store.dispatch(actions.addMovie(mockMovie)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.addMovie(mockMovie))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('editMovie', () => {
-    const store = mockStore({});
+    const store = mockStore(mockInitialState);
     const expectedActions = [
-      {type: actionTypes.CLOSE_MODAL}
+      {type: actionTypes.CLOSE_MODAL},
+      {type: actionTypes.START_ASYNC_REQUEST}
     ];
 
     moxios.wait(() => {
@@ -285,15 +325,20 @@ describe('movies actions', () => {
       request.respondWith(mockSuccessResponse);
     });
 
-    return store.dispatch(actions.editMovie(mockMovie)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.editMovie(mockMovie))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('editMovie error', () => {
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.CATCH_ERROR, payload: mockErrorMessage}
+      {
+        type: actionTypes.CATCH_ERROR,
+        payload: mockErrorMessage
+      }
     ];
 
     moxios.wait(() => {
@@ -302,15 +347,18 @@ describe('movies actions', () => {
       request.reject(mockErrorResponse);
     });
 
-    return store.dispatch(actions.editMovie(mockMovie)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.editMovie(mockMovie))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('deleteMovie', () => {
-    const store = mockStore({});
+    const store = mockStore(mockInitialState);
     const expectedActions = [
-      {type: actionTypes.CLOSE_MODAL}
+      {type: actionTypes.CLOSE_MODAL},
+      {type: actionTypes.START_ASYNC_REQUEST}
     ];
 
     moxios.wait(() => {
@@ -319,15 +367,20 @@ describe('movies actions', () => {
       request.respondWith(mockSuccessResponse);
     });
 
-    return store.dispatch(actions.deleteMovie(mockMovie.id)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.deleteMovie(mockMovie.id))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('deleteMovie error', () => {
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.CATCH_ERROR, payload: mockErrorMessage}
+      {
+        type: actionTypes.CATCH_ERROR,
+        payload: mockErrorMessage
+      }
     ];
 
     moxios.wait(() => {
@@ -336,24 +389,48 @@ describe('movies actions', () => {
       request.reject(mockErrorResponse);
     });
 
-    return store.dispatch(actions.deleteMovie(mockMovie.id)).then(() => {
-      expect(store.getActions()).toEqual(expectedActions);
-    });
+    return store.dispatch(actions.deleteMovie(mockMovie.id))
+      .then(() => {
+        expect(store.getActions())
+          .toEqual(expectedActions);
+      });
   });
 
   test('setStateFromURL', () => {
-    const mockParams = '?filter=comedy&limit=12&sortBy=release_date&sortOrder=desc&search=movie&searchBy=title';
-    const mockURL = new URLSearchParams(mockParams);
+    const mockRouterQuery = {
+      filter: mockFilter,
+      limit: mockLimit,
+      search: mockSearch,
+      sortBy: mockSortBy,
+      sortOrder: mockSortOrder
+    };
+
     const store = mockStore({});
     const expectedActions = [
-      {type: actionTypes.SET_SEARCH, payload: 'movie'},
-      {type: actionTypes.SET_ACTIVE_FILTER, payload: 'comedy'},
-      {type: actionTypes.SET_SORT_BY, payload: 'release_date'},
-      {type: actionTypes.SET_SORT_ORDER, payload: 'desc'},
-      {type: actionTypes.SET_LIMIT, payload: '12'}
+      {
+        type: actionTypes.SET_SEARCH,
+        payload: mockSearch
+      },
+      {
+        type: actionTypes.SET_ACTIVE_FILTER,
+        payload: mockFilter
+      },
+      {
+        type: actionTypes.SET_SORT_BY,
+        payload: mockSortBy
+      },
+      {
+        type: actionTypes.SET_SORT_ORDER,
+        payload: mockSortOrder
+      },
+      {
+        type: actionTypes.SET_LIMIT,
+        payload: mockLimit
+      }
     ];
 
-    store.dispatch(actions.setStateFromURL(mockURL));
-    expect(store.getActions()).toEqual(expectedActions);
+    store.dispatch(actions.setStateFromURL(mockRouterQuery));
+    expect(store.getActions())
+      .toEqual(expectedActions);
   });
 });

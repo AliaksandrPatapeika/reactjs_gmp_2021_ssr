@@ -1,0 +1,46 @@
+@import "../../less/variables";
+
+.resultsSortContainer {
+	display: flex;
+	padding-bottom: 17px;
+	align-items: center;
+
+	.sortBy {
+		color: @gray;
+		font-size: 20px;
+		font-family: @NetflixSans-Regular;
+		white-space: nowrap;
+	}
+
+	.arrow {
+		cursor: pointer;
+		margin-left: 10px;
+		color: @red;
+		font-size: 22px;
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			color: @red-hover;
+		}
+	}
+
+	.resultSortSelect {
+		width: 210px;
+		margin-left: 10px;
+
+		.select__control {
+			background-color: transparent;
+
+			.select__single-value {
+				color: @white;
+				font-size: 22px;
+				font-family: @TextaAlt-Regular;
+			}
+
+			.select__dropdown-indicator {
+				font-size: 22px;
+			}
+		}
+	}
+}
