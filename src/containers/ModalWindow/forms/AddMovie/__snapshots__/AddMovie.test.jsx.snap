@@ -196,7 +196,7 @@ Array [
                         },
                       }
                     }
-                    id="react-select-2-input"
+                    id="react-select-genres-input"
                     onBlur={[Function]}
                     onChange={[Function]}
                     onFocus={[Function]}

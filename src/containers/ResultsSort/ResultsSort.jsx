@@ -57,6 +57,7 @@ const ResultsSort = () => {
         className="select resultSortSelect"
         classNamePrefix="select"
         id="resultSort"
+        instanceId="resultSort"
         options={SortBy}
         onChange={setSortByHandler}
         value={getSortValue()}

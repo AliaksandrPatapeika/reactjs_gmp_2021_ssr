@@ -234,7 +234,7 @@ exports[`ModalWindow renders correctly 1`] = `
                               },
                             }
                           }
-                          id="react-select-2-input"
+                          id="react-select-genres-input"
                           onBlur={[Function]}
                           onChange={[Function]}
                           onFocus={[Function]}

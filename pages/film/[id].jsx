@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 
 import Footer from '../../src/containers/Footer';
@@ -7,6 +8,10 @@ import MovieDetails from '../../src/containers/MovieDetails';
 
 const MovieDetailsPage = () => (
   <>
+    <Head>
+      <title>Movie Details Page</title>
+      <link rel="icon" href="/img/favicon.ico" />
+    </Head>
     <Loading />
     <MovieDetails />
     <Main />

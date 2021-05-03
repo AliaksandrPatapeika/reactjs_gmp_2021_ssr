@@ -9,7 +9,7 @@ import ModalWindow from '../src/containers/ModalWindow';
 const HomePage = () => (
   <>
     <Head>
-      <title>ReactJS Global Mentoring Program 2021</title>
+      <title>Home Page</title>
       <link rel="icon" href="/img/favicon.ico" />
     </Head>
     <Header />

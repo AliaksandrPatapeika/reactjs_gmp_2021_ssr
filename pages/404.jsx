@@ -1,5 +1,6 @@
 import './PageNotFound.less';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,6 +10,10 @@ import HeaderTop from '../src/containers/HeaderTop';
 
 const PageNotFound = () => (
   <>
+    <Head>
+      <title>Page Not Found</title>
+      <link rel="icon" href="/img/favicon.ico" />
+    </Head>
     <div className="pageNotFoundContainer">
       <HeaderTop hideButton />
       <div className="pageNotFoundContent">

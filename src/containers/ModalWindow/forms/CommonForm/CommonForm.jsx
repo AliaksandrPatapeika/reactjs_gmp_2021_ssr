@@ -30,6 +30,7 @@ const CommonForm = ({formik, isEdit}) => (
       className="select"
       classNamePrefix="select"
       name="genres"
+      instanceId="genres"
       label="GENRE"
       options={Genres}
       placeholder="Select Genre"

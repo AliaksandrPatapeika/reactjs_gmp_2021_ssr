@@ -97,7 +97,7 @@ exports[`EditMovie renders correctly 1`] = `
       placeholder="Movie URL here"
       required={false}
       type="text"
-      value="test-file-stub"
+      value="http://localhost:3000/img/01-pulp-fiction.jpg"
     />
   </div>
   <div
@@ -172,7 +172,7 @@ exports[`EditMovie renders correctly 1`] = `
                         "genres": Array [],
                         "id": 1,
                         "overview": "Pulp Fiction is a 1994 American neo-noir black comedy crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[4] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.",
-                        "poster_path": "test-file-stub",
+                        "poster_path": "http://localhost:3000/img/01-pulp-fiction.jpg",
                         "release_date": "2004-03-15",
                         "revenue": 136906000,
                         "runtime": 154,
@@ -210,7 +210,7 @@ exports[`EditMovie renders correctly 1`] = `
                         "genres": Array [],
                         "id": 1,
                         "overview": "Pulp Fiction is a 1994 American neo-noir black comedy crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[4] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.",
-                        "poster_path": "test-file-stub",
+                        "poster_path": "http://localhost:3000/img/01-pulp-fiction.jpg",
                         "release_date": "2004-03-15",
                         "revenue": 136906000,
                         "runtime": 154,
@@ -221,7 +221,7 @@ exports[`EditMovie renders correctly 1`] = `
                       },
                     }
                   }
-                  id="react-select-2-input"
+                  id="react-select-genres-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}

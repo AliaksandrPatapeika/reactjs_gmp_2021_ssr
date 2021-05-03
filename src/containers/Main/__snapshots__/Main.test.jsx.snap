@@ -107,7 +107,7 @@ exports[`Main renders correctly 1`] = `
                   autoComplete="off"
                   autoCorrect="off"
                   disabled={false}
-                  id="react-select-2-input"
+                  id="react-select-resultSort-input"
                   onBlur={[Function]}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -215,7 +215,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/01-pulp-fiction.jpg"
         />
       </button>
       <button
@@ -268,7 +268,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/02-bohemian-rhapsody.jpg"
         />
       </button>
       <button
@@ -321,7 +321,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/03-kill-bill.jpg"
         />
       </button>
       <button
@@ -374,7 +374,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/04-avengers-infinity-war.jpg"
         />
       </button>
       <button
@@ -427,7 +427,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/05-inception.jpg"
         />
       </button>
       <button
@@ -480,7 +480,7 @@ exports[`Main renders correctly 1`] = `
           alt="movie card poster"
           className="movieCardPoster"
           onError={[Function]}
-          src="test-file-stub"
+          src="http://localhost:3000/img/06-reservoir-dogs.jpg"
         />
       </button>
       <button

@@ -8,7 +8,7 @@ exports[`MovieDetailsContent renders correctly 1`] = `
     alt="movie details poster"
     className="movieDetailsPoster"
     onError={[Function]}
-    src="test-file-stub"
+    src="http://localhost:3000/img/01-pulp-fiction.jpg"
   />
   <div
     className="movieDetailsContent"

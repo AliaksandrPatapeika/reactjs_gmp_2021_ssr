@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import React from 'react';
 
 import Footer from '../../src/containers/Footer';
@@ -8,6 +9,10 @@ import ModalWindow from '../../src/containers/ModalWindow';
 
 const SearchPage = () => (
   <>
+    <Head>
+      <title>Search Page</title>
+      <link rel="icon" href="/img/favicon.ico" />
+    </Head>
     <Loading />
     <Header />
     <Main />
