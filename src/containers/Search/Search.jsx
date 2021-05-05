@@ -24,6 +24,7 @@ const Search = () => {
       pathname: '/search',
       search: getQueryString(assign(query, {search: value}))
     });
+    // , '/search page'); // (router.push 2nd parameter) Implement route masking
   };
   const handleKeyDown = useCallback(
     (event) => {

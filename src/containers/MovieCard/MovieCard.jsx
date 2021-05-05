@@ -47,7 +47,10 @@ const MovieCard = ({
       className="movieCardContainer"
       onMouseLeave={closeMovieCardSubMenu}
     >
-      <Link href={`/film/${id}`}>
+      <Link
+        href={`/film/${id}`}
+        // as={`/film/${title}`} // Implement route masking
+      >
         <Button className="posterButton" onClick={showMovieDetailsWindow}>
           <img
             src={poster_path || '/img/noImage.png'}
