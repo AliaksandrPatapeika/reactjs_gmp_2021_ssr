@@ -1,4 +1,6 @@
-import {boolean, text, withKnobs} from '@storybook/addon-knobs';
+import {
+  boolean, color, text, withKnobs
+} from '@storybook/addon-knobs';
 import React from 'react';
 
 export default {
@@ -7,7 +9,14 @@ export default {
 };
 
 export const withAButton = () => (
-  <button type="button" disabled={boolean('disabled', false)}>
+  <button
+    type="button"
+    disabled={boolean('disabled', false)}
+    style={{
+      color: color('color', 'salmon'),
+      backgroundColor: color('backgroundColor', 'lightgray')
+    }}
+  >
     {text('label', 'SUBMIT')}
   </button>
 );
