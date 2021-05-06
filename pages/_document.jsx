@@ -15,6 +15,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <title>ReactJS Global Mentoring Program 2021</title>
+          <meta name="description" content="ReactJS Global Mentoring Program 2021" />
         </Head>
         <body>
           <Main />
