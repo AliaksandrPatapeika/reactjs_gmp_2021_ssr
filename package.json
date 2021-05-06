@@ -1,81 +1,89 @@
 {
-	"name": "reactjs_gmp_2021_ssr",
-	"version": "0.1.0",
-	"description": "ReactJS Global Mentoring Program 2021",
-	"main": "pages/index.jsx",
-	"scripts": {
-		"test": "jest",
-		"test:coverage": "jest --coverage",
-		"test:updateSnapshot": "jest --updateSnapshot",
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"code:check": "eslint . --ext .js,.jsx",
-		"code:fix": "eslint . --ext .js,.jsx --fix"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/AliaksandrPatapeika/reactjs_gmp_2021_ssr.git"
-	},
-	"jest": {
-		"moduleDirectories": [
-			"node_modules",
-			"pages",
-			"src"
-		],
-		"moduleNameMapper": {
-			"\\.(ttf|woff|png|jpg|jpeg|svg|gif)$": "<rootDir>/src/tests/mocks/fileMock.js",
-			"\\.(css|less)$": "identity-obj-proxy"
-		}
-	},
-	"keywords": [],
-	"author": "Aliaksandr Patapeika",
-	"license": "ISC",
-	"dependencies": {
-		"@zeit/next-less": "^1.0.1",
-		"axios": "^0.21.1",
-		"formik": "^2.2.6",
-		"lodash": "^4.17.21",
-		"next": "10.2.0",
-		"prop-types": "^15.7.2",
-		"react": "17.0.2",
-		"react-dom": "17.0.2",
-		"react-loading": "^2.0.3",
-		"react-redux": "^7.2.4",
-		"react-router-dom": "^5.2.0",
-		"react-select": "^4.3.0",
-		"redux": "^4.1.0",
-		"redux-devtools-extension": "^2.13.9",
-		"redux-thunk": "^2.3.0",
-		"yup": "^0.32.9"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.13.16",
-		"@babel/eslint-parser": "^7.13.14",
-		"@babel/plugin-proposal-class-properties": "^7.13.0",
-		"@babel/preset-env": "^7.13.15",
-		"@babel/preset-react": "^7.13.13",
-		"@types/jest": "^26.0.23",
-		"@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
-		"babel-jest": "^26.6.3",
-		"babel-loader": "^8.2.2",
-		"cross-env": "^7.0.3",
-		"css-loader": "^5.2.4",
-		"enzyme": "^3.11.0",
-		"eslint": "^7.25.0",
-		"eslint-config-airbnb": "^18.2.1",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.23.2",
-		"eslint-plugin-react-hooks": "^4.2.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"file-loader": "^6.2.0",
-		"identity-obj-proxy": "^3.0.0",
-		"jest": "^26.6.3",
-		"less": "^4.1.1",
-		"less-loader": "^7.3.0",
-		"moxios": "^0.4.0",
-		"react-test-renderer": "^17.0.2",
-		"redux-mock-store": "^1.5.4"
-	}
+  "name": "reactjs_gmp_2021_ssr",
+  "version": "0.1.0",
+  "description": "ReactJS Global Mentoring Program 2021",
+  "main": "pages/index.jsx",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:updateSnapshot": "jest --updateSnapshot",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "code:check": "eslint . --ext .js,.jsx",
+    "code:fix": "eslint . --ext .js,.jsx --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliaksandrPatapeika/reactjs_gmp_2021_ssr.git"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "pages",
+      "src"
+    ],
+    "moduleNameMapper": {
+      "\\.(ttf|woff|png|jpg|jpeg|svg|gif)$": "<rootDir>/src/tests/mocks/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "keywords": [],
+  "author": "Aliaksandr Patapeika",
+  "license": "ISC",
+  "dependencies": {
+    "@storybook/addon-knobs": "^6.2.9",
+    "@zeit/next-less": "^1.0.1",
+    "axios": "^0.21.1",
+    "formik": "^2.2.6",
+    "lodash": "^4.17.21",
+    "next": "10.2.0",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-loading": "^2.0.3",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-select": "^4.3.0",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/register": "^7.13.16",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/jest": "^26.0.23",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
+    "enzyme": "^3.11.0",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "file-loader": "^6.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "moxios": "^0.4.0",
+    "react-test-renderer": "^17.0.2",
+    "redux-mock-store": "^1.5.4"
+  }
 }
