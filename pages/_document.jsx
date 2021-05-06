@@ -13,7 +13,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <title>ReactJS Global Mentoring Program 2021</title>
+        </Head>
         <body>
           <Main />
           <NextScript />
