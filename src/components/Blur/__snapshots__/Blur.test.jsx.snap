@@ -2,7 +2,7 @@
 
 exports[`Blur renders correctly 1`] = `
 <div
-  className="blur"
+  className="Blur__BlurWrapper-b9kkbo-0 jwekOJ"
 >
   Test
 </div>

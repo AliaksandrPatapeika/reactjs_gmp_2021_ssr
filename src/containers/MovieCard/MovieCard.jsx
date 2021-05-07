@@ -99,4 +99,4 @@ MovieCard.defaultProps = {
   movie: null
 };
 
-export default MovieCard;
+export default React.memo(MovieCard);

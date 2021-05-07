@@ -2,10 +2,10 @@
 
 exports[`MovieDetails renders correctly 1`] = `
 <div
-  className="headerContainer movieDetailsContainer"
+  className="MovieDetails__MovieDetailsWrapper-sc-5pmrvb-0 cRZVRB"
 >
   <div
-    className="blur"
+    className="Blur__BlurWrapper-b9kkbo-0 jwekOJ"
   >
     <div
       className="headerTopContainer"

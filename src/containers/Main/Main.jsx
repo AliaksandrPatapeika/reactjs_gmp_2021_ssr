@@ -35,4 +35,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default React.memo(Main);

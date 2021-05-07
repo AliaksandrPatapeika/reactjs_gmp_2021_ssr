@@ -5,7 +5,7 @@ exports[`ModalWindow renders correctly 1`] = `
   className="modalWindowContainer"
 >
   <div
-    className="blur"
+    className="Blur__BlurWrapper-b9kkbo-0 jwekOJ"
   >
     <div
       className="logoContainer"
