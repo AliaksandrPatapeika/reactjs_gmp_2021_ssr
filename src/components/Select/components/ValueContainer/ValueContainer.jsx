@@ -18,6 +18,7 @@ const ValueContainer = ({children, ...props}) => {
   }
 
   return (
+    // PATTERN: Spreading props on DOM elements
     <components.ValueContainer {...props}>
       {toBeRendered}
     </components.ValueContainer>

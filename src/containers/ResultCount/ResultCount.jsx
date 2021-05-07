@@ -4,7 +4,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {createSelector} from 'reselect';
 
-// PATTERN: Reselect
+// PATTERN: Use Reselect in Redux to Avoid Frequent Re-render
 const totalAmountSelector = (totalAmount) => totalAmount;
 const getTotalAmount = createSelector(
   totalAmountSelector,

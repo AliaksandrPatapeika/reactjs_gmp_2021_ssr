@@ -13,6 +13,7 @@ const MoviesList = () => {
       {movies.map((item) => (
         <MovieCard
           movie={item}
+          // PATTERN: Avoid using Index as Key for map
           key={item.id}
         />
       ))}
@@ -20,4 +21,5 @@ const MoviesList = () => {
   );
 };
 
+// PATTERN: Memoize React Components
 export default React.memo(MoviesList);

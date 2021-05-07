@@ -54,10 +54,12 @@ const Search = () => {
         className="searchButton"
         ref={searchButtonRef}
         title="SEARCH"
+        // PATTERN: Avoid Inline Function Definition in the Render Function
         onClick={onClickHandler}
       />
     </div>
   );
 };
 
+// PATTERN: Memoize React Components
 export default React.memo(Search);

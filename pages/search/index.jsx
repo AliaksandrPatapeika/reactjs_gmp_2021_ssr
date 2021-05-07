@@ -8,6 +8,7 @@ import Main from '../../src/containers/Main';
 import ModalWindow from '../../src/containers/ModalWindow';
 
 const SearchPage = () => (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     <Head>
       <title>Search Page</title>

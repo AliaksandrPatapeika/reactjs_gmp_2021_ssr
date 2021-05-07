@@ -7,6 +7,7 @@ import Main from '../../src/containers/Main';
 import MovieDetails from '../../src/containers/MovieDetails';
 
 const MovieDetailsPage = () => (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     <Head>
       <title>Movie Details Page</title>

@@ -51,6 +51,7 @@ const MovieCard = ({
         href={`/film/${id}`}
         // as={`/film/${title}`} // Implement route masking
       >
+        {/* // PATTERN: Avoid Inline Function Definition in the Render Function */}
         <Button className="posterButton" onClick={showMovieDetailsWindow}>
           <img
             src={poster_path || '/img/noImage.png'}
@@ -60,6 +61,7 @@ const MovieCard = ({
           />
         </Button>
       </Link>
+      {/* // PATTERN: Avoid Inline Function Definition in the Render Function */}
       <Button className="threeDotsIcon" onClick={showMovieCardSubMenu}>
         <img src="/img/moreButton.svg" alt="movie card menu" />
       </Button>
@@ -99,4 +101,5 @@ MovieCard.defaultProps = {
   movie: null
 };
 
+// PATTERN: Memoize React Components
 export default React.memo(MovieCard);

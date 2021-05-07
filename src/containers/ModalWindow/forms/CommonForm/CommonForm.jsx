@@ -7,6 +7,7 @@ import {Genres} from '../../../../constants';
 import FormItem from '../FormItem';
 
 const CommonForm = ({formik, isEdit}) => (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     {isEdit && (
     <FormItem label="MOVIE ID" name="id" readOnly />

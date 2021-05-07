@@ -8,6 +8,7 @@ const Option = (props) => {
 
   return (
     <div>
+      {/* // PATTERN: Spreading props on DOM elements */}
       <components.Option {...props}>
         <input
           type="checkbox"

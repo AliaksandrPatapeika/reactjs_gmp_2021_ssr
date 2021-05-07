@@ -33,6 +33,7 @@ export const Header = ({
         {user ? (
           <Button size="small" onClick={onLogout} label="Log out" />
         ) : (
+          // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
           <>
             <Button size="small" onClick={onLogin} label="Log in" />
             <Button primary size="small" onClick={onCreateAccount} label="Sign up" />

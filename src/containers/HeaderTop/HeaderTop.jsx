@@ -41,10 +41,12 @@ const HeaderTop = ({hideButton}) => {
     <div className="headerTopContainer">
       <Logo />
       {!hideButton && (
+        // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
         <>
           {activeMovieDetailsMovie ? (
             <Button
               className="returnToMainButton"
+              // PATTERN: Avoid Inline Function Definition in the Render Function
               onClick={onClickHandler}
               ref={returnToMainButtonRef}
             >
@@ -53,6 +55,7 @@ const HeaderTop = ({hideButton}) => {
           ) : (
             <Button
               className="addMovieButton"
+              // PATTERN: Avoid Inline Function Definition in the Render Function
               onClick={showAddMovieWindow}
               title="+ ADD MOVIE"
             />

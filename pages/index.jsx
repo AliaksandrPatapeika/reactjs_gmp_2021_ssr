@@ -7,6 +7,7 @@ import Header from '../src/containers/Header';
 import ModalWindow from '../src/containers/ModalWindow';
 
 const HomePage = () => (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     <Head>
       <title>Home Page</title>

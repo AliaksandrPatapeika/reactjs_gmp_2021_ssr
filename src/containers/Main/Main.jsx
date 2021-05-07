@@ -35,4 +35,5 @@ const Main = () => {
   );
 };
 
+// PATTERN: Memoize React Components
 export default React.memo(Main);

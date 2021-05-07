@@ -36,6 +36,7 @@ const ResultsFilter = () => {
         {genres.filterItems.map((item) => (
           <FilterItem
             label={item.label}
+            // PATTERN: Avoid using Index as Key for map
             key={item.id}
             isActive={item.value === filter}
             setFilter={() => setFilterHandler(item.value)}

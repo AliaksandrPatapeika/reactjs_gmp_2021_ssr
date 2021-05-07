@@ -17,6 +17,7 @@ const Select = (props) => {
   if (isMulti && allowSelectAll) {
     return (
       <RequiredSelect
+        // PATTERN: Spreading props on DOM elements
         {...props}
         SelectComponent={ReactSelect}
         options={[props.allOption, ...props.options]}

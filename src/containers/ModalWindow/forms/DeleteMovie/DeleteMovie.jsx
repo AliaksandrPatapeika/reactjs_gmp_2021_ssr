@@ -14,6 +14,7 @@ const DeleteMovie = ({formTitle, movieId}) => {
   };
 
   return activeModalWindow === 'deleteMovie' && (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     <span className="title">{formTitle}</span>
     <form onSubmit={onSubmit}>

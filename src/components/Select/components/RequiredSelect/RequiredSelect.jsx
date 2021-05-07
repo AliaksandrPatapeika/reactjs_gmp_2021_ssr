@@ -25,6 +25,7 @@ const RequiredSelect = ({
   return (
     <div className="requiredSelectContainer">
       <SelectComponent
+        // PATTERN: Spreading props on DOM elements
         {...props}
         value={getValue()}
         onChange={onChangeHandler}

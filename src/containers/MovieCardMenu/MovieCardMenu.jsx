@@ -44,6 +44,7 @@ const MovieCardMenu = ({
 
   return showSubMenu && (
   <div className="movieCardMenuContainer" onBlur={handleBlur}>
+    {/* // PATTERN: Avoid Inline Function Definition in the Render Function */}
     <Button className="closeButton" ref={movieCardMenuCloseButtonRef} onClick={closeSubMenu}>
       <i className="fa fa-times" aria-hidden="true" />
     </Button>
@@ -53,6 +54,7 @@ const MovieCardMenu = ({
           role="menuitem"
           tabIndex="0"
           className="menuItem"
+          // PATTERN: Avoid Inline Function Definition in the Render Function
           onClick={showEditMovieWindow}
           onKeyPress={showEditMovieWindow}
         >
@@ -62,6 +64,7 @@ const MovieCardMenu = ({
           role="menuitem"
           tabIndex="0"
           className="menuItem"
+          // PATTERN: Avoid Inline Function Definition in the Render Function
           onClick={showDeleteMovieWindow}
           onKeyPress={showDeleteMovieWindow}
         >

@@ -62,6 +62,7 @@ const ResultsSort = () => {
         onChange={setSortByHandler}
         value={getSortValue()}
       />
+      {/* // PATTERN: Avoid Inline Function Definition in the Render Function */}
       <Button className="arrow" onClick={setSortOrderHandler}>
         <SortIcon sortOrder={sortOrder} />
       </Button>

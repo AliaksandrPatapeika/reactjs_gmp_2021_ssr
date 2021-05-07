@@ -47,6 +47,7 @@ const ModalWindow = () => {
       <div className="modalWindow">
         <Button
           className="closeButton"
+          // PATTERN: Avoid Inline Function Definition in the Render Function
           onClick={closeModalWindow}
           ref={modalWindowCloseButtonRef}
         >
@@ -55,6 +56,7 @@ const ModalWindow = () => {
         <div className="modalBody">
           <AddMovie formTitle="ADD MOVIE" />
           {activeModalMovie && (
+          // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
           <>
             <EditMovie formTitle="EDIT MOVIE" movie={activeModalMovie} />
             <DeleteMovie formTitle="DELETE MOVIE" movieId={activeModalMovie.id} />

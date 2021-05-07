@@ -17,6 +17,7 @@ const MultiValue = (props) => {
     labelToBeDisplayed = allSelectedLabel;
   }
   return (
+    // PATTERN: Spreading props on DOM elements
     <components.MultiValue {...props}>
       <span>{labelToBeDisplayed}</span>
     </components.MultiValue>

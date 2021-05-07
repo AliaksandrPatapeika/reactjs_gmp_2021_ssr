@@ -9,6 +9,7 @@ import Footer from '../src/containers/Footer';
 import HeaderTop from '../src/containers/HeaderTop';
 
 const PageNotFound = () => (
+  // PATTERN: Use Fragments to Avoid Additional HTML Element Wrappers
   <>
     <Head>
       <title>Page Not Found</title>
