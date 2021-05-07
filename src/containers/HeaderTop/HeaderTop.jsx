@@ -18,11 +18,13 @@ const HeaderTop = ({hideButton}) => {
   const returnToMainButtonRef = useRef();
 
   const onClickHandler = () => {
-    dispatch(closeMovieDetails());
     router.push({
       pathname: '/search',
       search: getQueryString(query)
-    });
+    })
+      .then(() => {
+        dispatch(closeMovieDetails());
+      });
   };
 
   const showAddMovieWindow = () => {
@@ -39,23 +41,23 @@ const HeaderTop = ({hideButton}) => {
     <div className="headerTopContainer">
       <Logo />
       {!hideButton && (
-      <>
-        {activeMovieDetailsMovie ? (
-          <Button
-            className="returnToMainButton"
-            onClick={onClickHandler}
-            ref={returnToMainButtonRef}
-          >
-            <i className="fa fa-search fa-flip-horizontal" aria-hidden="true" />
-          </Button>
-        ) : (
-          <Button
-            className="addMovieButton"
-            onClick={showAddMovieWindow}
-            title="+ ADD MOVIE"
-          />
-        )}
-      </>
+        <>
+          {activeMovieDetailsMovie ? (
+            <Button
+              className="returnToMainButton"
+              onClick={onClickHandler}
+              ref={returnToMainButtonRef}
+            >
+              <i className="fa fa-search fa-flip-horizontal" aria-hidden="true" />
+            </Button>
+          ) : (
+            <Button
+              className="addMovieButton"
+              onClick={showAddMovieWindow}
+              title="+ ADD MOVIE"
+            />
+          )}
+        </>
       )}
     </div>
   );

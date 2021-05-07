@@ -1,3 +1,5 @@
+import {List} from 'immutable';
+
 import * as actions from '../../actions/actionTypes';
 
 export const initialState = {
@@ -6,7 +8,7 @@ export const initialState = {
   activeMovieDetailsMovie: null,
   errorMessage: '',
   isLoading: false,
-  movies: [],
+  movies: List(),
   totalAmount: null
 };
 
@@ -32,7 +34,7 @@ const movie = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        movies: action.payload.data,
+        movies: List(action.payload.data),
         totalAmount: action.payload.totalAmount
       };
     case actions.GET_MOVIE_BY_ID_SUCCESS:

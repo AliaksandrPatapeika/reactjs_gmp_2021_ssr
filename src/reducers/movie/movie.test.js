@@ -1,3 +1,4 @@
+import {List} from 'immutable';
 import {head} from 'lodash';
 
 import * as actionTypes from '../../actions/actionTypes';
@@ -69,7 +70,7 @@ describe('movie reducer', () => {
 
     expect(state).toEqual({
       ...initialState,
-      movies: MockMovies,
+      movies: List(MockMovies),
       totalAmount: mockTotalAmount
     });
   });
