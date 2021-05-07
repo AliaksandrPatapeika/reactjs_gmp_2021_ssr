@@ -1,14 +1,21 @@
-import './MovieDetailsLabel.less';
-
 import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
+
+const MovieDetailsLabelWrapper = styled.div`
+  margin-bottom: 4px;
+  color: #f65261;
+`;
+const MovieDetailsValue = styled.span`
+  color: #ffffff;
+`;
 
 const MovieDetailsLabel = ({label, value}) => (
-  <div className="movieDetailsLabel">
+  <MovieDetailsLabelWrapper>
     {label}
     {': '}
-    <span className="movieDetailsValue">{value}</span>
-  </div>
+    <MovieDetailsValue>{value}</MovieDetailsValue>
+  </MovieDetailsLabelWrapper>
 );
 
 MovieDetailsLabel.propTypes = {

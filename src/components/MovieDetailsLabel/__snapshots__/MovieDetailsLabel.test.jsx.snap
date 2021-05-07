@@ -2,12 +2,12 @@
 
 exports[`MovieDetailsLabel renders correctly 1`] = `
 <div
-  className="movieDetailsLabel"
+  className="MovieDetailsLabel__MovieDetailsLabelWrapper-sc-35caid-0 wEuzg"
 >
   mock label
   : 
   <span
-    className="movieDetailsValue"
+    className="MovieDetailsLabel__MovieDetailsValue-sc-35caid-1 cQRzbq"
   >
     mock value
   </span>

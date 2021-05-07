@@ -39,27 +39,27 @@ exports[`MovieDetails renders correctly 1`] = `
       </button>
     </div>
     <div
-      className="movieDetailsContentContainer"
+      className="MovieDetailsContent__MovieDetailsContentContainer-sc-1gunzxo-0 bwKGxc"
     >
       <img
         alt="movie details poster"
-        className="movieDetailsPoster"
+        className="MovieDetailsContent__MovieDetailsPoster-sc-1gunzxo-1 bdIdZL"
         onError={[Function]}
         src="http://localhost:3000/img/01-pulp-fiction.jpg"
       />
       <div
-        className="movieDetailsContent"
+        className="MovieDetailsContent__MovieDetailsContentWrapper-sc-1gunzxo-2 fhNbBK"
       >
         <div
-          className="movieDetailsTitleRating"
+          className="MovieDetailsContent__MovieDetailsTitleRating-sc-1gunzxo-3 ckiJyg"
         >
           <span
-            className="movieDetailsTitle"
+            className="MovieDetailsContent__MovieDetailsTitle-sc-1gunzxo-4 jKPqFV"
           >
             Pulp Fiction
           </span>
           <div
-            className="movieDetailsRating"
+            className="MovieDetailsContent__MovieDetailsRating-sc-1gunzxo-5 iRaiVO"
             title="Vote count: 1195"
           >
             4.3
@@ -69,7 +69,7 @@ exports[`MovieDetails renders correctly 1`] = `
           Mock tagline!
         </div>
         <div
-          className="movieDetailsReleaseDateRuntime"
+          className="MovieDetailsContent__MovieDetailsReleaseDateRuntime-sc-1gunzxo-6 fjylqV"
         >
           <div
             title="Release date: 2004-03-15"
@@ -83,40 +83,40 @@ exports[`MovieDetails renders correctly 1`] = `
           </div>
         </div>
         <div
-          className="movieDetailsLabel"
+          className="MovieDetailsLabel__MovieDetailsLabelWrapper-sc-35caid-0 wEuzg"
         >
           Genres
           : 
           <span
-            className="movieDetailsValue"
+            className="MovieDetailsLabel__MovieDetailsValue-sc-35caid-1 cQRzbq"
           >
             Action & Adventure
           </span>
         </div>
         <div
-          className="movieDetailsLabel"
+          className="MovieDetailsLabel__MovieDetailsLabelWrapper-sc-35caid-0 wEuzg"
         >
           Budget
           : 
           <span
-            className="movieDetailsValue"
+            className="MovieDetailsLabel__MovieDetailsValue-sc-35caid-1 cQRzbq"
           >
             55 000 000 $
           </span>
         </div>
         <div
-          className="movieDetailsLabel"
+          className="MovieDetailsLabel__MovieDetailsLabelWrapper-sc-35caid-0 wEuzg"
         >
           Revenue
           : 
           <span
-            className="movieDetailsValue"
+            className="MovieDetailsLabel__MovieDetailsValue-sc-35caid-1 cQRzbq"
           >
             136 906 000 $
           </span>
         </div>
         <div
-          className="overview"
+          className="MovieDetailsContent__Overview-sc-1gunzxo-7 hJWIDD"
         >
           Pulp Fiction is a 1994 American neo-noir black comedy crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[4] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.
         </div>
