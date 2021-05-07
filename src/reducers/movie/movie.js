@@ -2,6 +2,7 @@ import {List} from 'immutable';
 
 import * as actions from '../../actions/actionTypes';
 
+// PATTERN: Immutability
 export const initialState = {
   activeModalMovie: null,
   activeModalWindow: false,

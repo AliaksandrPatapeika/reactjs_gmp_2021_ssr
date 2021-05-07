@@ -4,6 +4,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {createSelector} from 'reselect';
 
+// PATTERN: Reselect
 const totalAmountSelector = (totalAmount) => totalAmount;
 const getTotalAmount = createSelector(
   totalAmountSelector,
